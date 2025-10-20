@@ -1,67 +1,174 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CAP Garland, LLC</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-      color: #333;
-    }
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
-    section {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    h1, h2 {
-      color: #003366;
-    }
-    .contact {
-      background: #fff;
-      padding: 20px;
-      border-left: 5px solid #003366;
-      margin-top: 30px;
-    }
-    footer {
-      background-color: #003366;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 50px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Crawford Steel Company LLC — Los Angeles, CA</title>
+<meta name="description" content="Crawford Steel Company LLC • Steel supplier on Hobart Blvd, Los Angeles, CA 90062. Sheets, plates, beams, bars, and custom cuts.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --steel:#1f3b5b;   /* steel blue */
+    --slate:#0f172a;   /* deep slate */
+    --ink:#111827;     /* text */
+    --paper:#f3f4f6;   /* background */
+    --white:#ffffff;   /* cards */
+    --line:#e5e7eb;    /* borders */
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,Arial,Helvetica,sans-serif;background:var(--paper);color:var(--ink)}
+  a{color:var(--steel);text-decoration:none}
+
+  header{background:linear-gradient(120deg,#0b1220,#0f172a);color:#fff;text-align:center;padding:34px 16px;border-bottom:6px solid var(--steel)}
+  header h1{margin:0;font-size:2.3rem}
+  header p{margin:8px 0 0;opacity:.95}
+
+  nav{background:#0b1220;text-align:center;padding:12px;position:sticky;top:0;z-index:10}
+  nav a{color:#fff;margin:0 14px;font-weight:800}
+  nav a:hover{color:var(--steel)}
+
+  .hero{max-width:1100px;margin:24px auto;display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center;padding:0 14px}
+  .hero img{width:100%;border-radius:14px;border:4px solid var(--steel);object-fit:cover}
+  .hero .text{background:var(--white);border:1px solid var(--line);border-left:6px solid var(--steel);border-radius:14px;padding:18px}
+  .tag{display:inline-block;background:#dbeafe;border:1px solid #bfdbfe;color:#1e3a8a;border-radius:999px;padding:6px 12px;margin:6px 6px 0 0;font-size:.9rem}
+
+  .section{max-width:1100px;margin:22px auto;background:var(--white);padding:22px;border-radius:12px;border:1px solid var(--line);box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .section h2{margin:0 0 12px;color:#0b1220}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+
+  .card{background:#fbfbfb;border:1px solid var(--line);border-left:6px solid var(--steel);border-radius:10px;padding:12px}
+  .stat{display:flex;gap:10px;align-items:center;background:#eff6ff;border:1px solid #dbeafe;border-radius:10px;padding:10px;color:#1e3a8a}
+
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:14px}
+  .gallery img{width:100%;border-radius:10px;border:2px solid var(--steel);object-fit:cover;aspect-ratio:4/3;transition:.25s}
+  .gallery img:hover{transform:scale(1.03)}
+
+  .cta{margin-top:12px;display:flex;gap:12px;flex-wrap:wrap}
+  .btn{background:var(--steel);color:#fff;padding:12px 16px;border-radius:10px;font-weight:800}
+  .btn.secondary{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+
+  footer{background:#0b1220;color:#fff;text-align:center;padding:18px;margin-top:26px;border-top:6px solid var(--steel)}
+
+  /* Floating buttons */
+  .bar{position:fixed;left:0;right:0;bottom:0;background:#ffffffd9;backdrop-filter:blur(6px);display:flex;gap:10px;justify-content:center;padding:10px;border-top:2px solid var(--steel);z-index:999}
+  .bar a{background:#0b1220;color:#fff;padding:10px 14px;border-radius:999px;font-weight:800}
+  .bar a:nth-child(2){background:var(--steel)}
+  @media(min-width:820px){.bar{display:none}}
+  @media(max-width:900px){.hero{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>CAP Garland, LLC</h1>
-    <p>Private Investment Fund</p>
-  </header>
 
-  <section>
-    <h2>About Us</h2>
-    <p>CAP Garland, LLC is a Washington-based private investment fund focused on delivering value through diversified investment strategies.</p>
+<header>
+  <h1>Crawford Steel Company LLC</h1>
+  <p>Steel Supply • Hobart Blvd, Los Angeles, CA 90062, United States</p>
+</header>
 
-    <h2>Contact</h2>
-    <div class="contact">
-      <p><strong>Address:</strong> 915 W 2nd Ave, Spokane, WA 99201</p>
-      <p><strong>Email:</strong> <a href="mailto:ryanberg@capgarland.shop">ryanberg@capgarland.shop</a></p>
-      <p><strong>Phone:</strong> (509) 822-3850</p>
+<nav>
+  <a href="#about">About</a>
+  <a href="#products">Products</a>
+  <a href="#services">Services</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <img src="https://grosjeansteeltrading.com/wp-content/uploads/2021/02/grosjean-steel-trading-05-toles.jpg" alt="Steel sheets and plates">
+  <div class="text">
+    <h2>Reliable steel. On spec. On time.</h2>
+    <p>From structural beams to precision‑cut plates, we deliver quality steel products and services to contractors, fabricators, and makers across Los Angeles.</p>
+    <div>
+      <span class="tag">🏗️ Structural</span>
+      <span class="tag">🔩 Fabrication</span>
+      <span class="tag">🚚 Local Delivery</span>
     </div>
-  </section>
+    <div class="cta">
+      <a class="btn" href="tel:+15717178730">Call: +1 (571) 717‑8730</a>
+      <a class="btn secondary" href="mailto:info@tevronia.shop">Email: info@tevronia.shop</a>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 CAP Garland, LLC. All rights reserved.
-  </footer>
+<!-- ABOUT -->
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p><strong>Crawford Steel Company LLC</strong> supplies a wide range of steel products with dependable lead times and straightforward service. Whether it’s a one‑off cut or a recurring order, we keep your projects moving.</p>
+  <div class="stat" role="note">📦 In‑stock profiles: sheet & plate, angle, channel, tube, bar, and more.</div>
+  <p><strong>Address:</strong> Hobart Blvd, Los Angeles, CA 90062, United States • <strong>Email:</strong> <a href="mailto:info@tevronia.shop">info@tevronia.shop</a> • <strong>Phone:</strong> <a href="tel:+15717178730">+1 (571) 717‑8730</a></p>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="section">
+  <h2>Products</h2>
+  <div class="grid">
+    <div class="card"><strong>Sheets & Plates</strong><br/>Mild, galvanized, stainless; cut to size.</div>
+    <div class="card"><strong>Beams & Channels</strong><br/>W‑beams, I‑beams, C‑channels for structural framing.</div>
+    <div class="card"><strong>Tubes & Pipe</strong><br/>Square/rectangular tube, round pipe, DOM options.</div>
+    <div class="card"><strong>Angles & Flats</strong><br/>Hot‑rolled/cold‑rolled bars, flats, angles.</div>
+    <div class="card"><strong>Hardware</strong><br/>Plasma‑cut parts, gussets, base plates on request.</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <h2>Services</h2>
+  <div class="grid">
+    <div class="card"><strong>Custom Cutting</strong><br/>Shear, saw, plasma, and water‑jet partners.</div>
+    <div class="card"><strong>Bending & Forming</strong><br/>Press brake and rolling via trusted shops.</div>
+    <div class="card"><strong>Delivery</strong><br/>Same‑day/next‑day delivery available in LA metro.</div>
+    <div class="card"><strong>Material Sourcing</strong><br/>Special alloys and mill orders coordinated.</div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery" class="section">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="https://avatars.mds.yandex.net/get-altay/239474/2a0000015e529e95b8cbe3d46b22e440aa24/XXL_height" alt="Stacked steel bars">
+    <img src="https://avatars.mds.yandex.net/get-altay/5236391/2a0000017be4688109de4a4b876dc241b58c/XXL_height" alt="Steel warehouse">
+    <img src="https://avatars.mds.yandex.net/i?id=528ce71214c407ebf44bdc363507016f_l-10099509-images-thumbs&ref=rim&n=13&w=800&h=800" alt="Cut steel plates">
+    <img src="https://grosjeansteeltrading.com/wp-content/uploads/2021/02/grosjean-steel-trading-05-toles.jpg" alt="Steel sheets detail">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <h2>Contact</h2>
+  <div class="grid">
+    <div>
+      <p>📧 <strong>Email:</strong> <a href="mailto:info@tevronia.shop">info@tevronia.shop</a></p>
+      <p>📞 <strong>Phone:</strong> <a href="tel:+15717178730">+1 (571) 717‑8730</a></p>
+      <p>📍 <strong>Address:</strong> Hobart Blvd, Los Angeles, CA 90062, United States</p>
+    </div>
+    <div>
+      <p><em>Hours</em></p>
+      <ul>
+        <li>Mon–Fri: 7:00 – 17:00</li>
+        <li>Sat: 8:00 – 12:00</li>
+        <li>Sun: Closed</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cta">
+    <a class="btn" href="#products">View Products</a>
+    <a class="btn secondary" href="#services">See Services</a>
+  </div>
+</section>
+
+<!-- MOBILE BAR -->
+<div class="bar">
+  <a href="tel:+15717178730">Call</a>
+  <a href="mailto:info@tevronia.shop">Email</a>
+  <a href="#products">Products</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 Crawford Steel Company LLC — Los Angeles, CA</p>
+</footer>
+
 </body>
 </html>
